@@ -27,6 +27,9 @@ body{
     line-height: 1.6;
     margin: 0;
     padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 img{
     max-width: 100%;
@@ -36,8 +39,9 @@ img{
 }
 .wrapper{
     background-color: #F5FFEB;
-    
     /** TODO 1: Center the site on the screen and style it to match the mockup **/
+    width: 1000px;
+    border-radius: 8px;
 }
 
 /*************************/
@@ -57,16 +61,29 @@ flex containers to make their children flex items
     padding: 20px;
 
     /* #site_header styles here */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 #logo{
     /* #logo styles here */
+    color: #F5FFEB;
+    font-size: 30px;
+    text-decoration: none
 }
 #main_nav{
     /* #main_nav styles here */
+    margin-left: auto;
 }
 #main_nav a{
     background-color: #E57727;
     /* #navigation button styles here */
+    padding: 15px;
+    border-radius: 5px;
+    color: #F5FFEB;
+    text-decoration: none;
 }
 #main_nav a:hover{
     background-color: #BA3610;
@@ -78,14 +95,21 @@ flex containers to make their children flex items
 #call_to_action{
     background-color: #BA3610;
     padding: 20px;
+    display: flex;
+    flex-direction: row;
 
     /* parent styles here */
 }
 #call_to_action div{
     /* text column styles here */
+    width: 60%;
 }
-#call_to_action div:first-child{
+#call_to_action div:first-child a{
     /* image column styles here */
+}
+#call_to_action img {
+    height: 235px;
+    margin-left: auto;
 }
 #call_to_action h1, #call_to_action p{
     color: white;
@@ -124,15 +148,23 @@ flex containers to make their children flex items
     margin: 0;
 
     /* flexible parent styles here */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 #featured_products li{
     /* list item styles here */
+    width: 32%;
+    /*margin-right: 13px;*/
 }
 #featured_products li img{
     border-radius: 4px;
 }
 #featured_products h2{
     /* TODO 4: Match the styles of the h2 to the mockup */
+    text-transform: uppercase;
+    font-size: 20px;
 }
 #featured_products p{
     margin-top: 0;
@@ -173,9 +205,17 @@ flex containers to make their children flex items
 }
 #products header{
     /* TODO 5: Style the product list header to match the mockup */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-bottom: 2px black solid;
+    margin-bottom: 20px;
 }
 #products header p{
     text-transform: uppercase;
+    text-align: center;
 }
 
 /**
@@ -190,11 +230,17 @@ flex containers to make their children flex items
     margin: 0;
 
     /* flexible parent styles here */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #products li{
 
     /* Styles for the li elements here */
+    width: 32%;
+    
 }
 #products li img{
     border-radius: 4px;
